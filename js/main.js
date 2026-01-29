@@ -8,6 +8,14 @@ let countdown = setInterval(()=>{
     let myDate = new Date;;
     let ramadanDate = new Date('2026-02-18T00:00:00');
     let deff = ramadanDate - myDate;
+
+    if (deff <= 0){
+        let text = document.querySelector('.text');
+        text.style.display = 'none';
+        let time = document.querySelector('.time');
+        time.innerHTML='اهلا رمضان🌙'
+    }
+
     let days = Math.floor(deff/(1000*60*60*24));
     let hours = Math.floor((deff % (1000*60*60*24)) / (1000*60*60));
     let minutes = Math.floor((deff % (1000*60*60)) / (1000*60));
