@@ -6,10 +6,10 @@
 }
 
 body{
+    position: relative;
     width: 100vw;
     height: 100vh;
-    background: url(../background.webp);
-    background-size: 200px 200px;
+    background: linear-gradient(to bottom, #02042D 20%, #014D85 100%);
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -17,22 +17,146 @@ body{
     align-items: center;
 }
 
+.img{
+    /* width: 274px; */
+    height: 150px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.img img{
+    width: 100%;
+    height: 100%;
+}
+
+.background{
+    z-index: 100;
+    width: 100%;
+    height: 50%;
+    position: fixed;
+    bottom: 0;
+    background-image: url(../background.png);
+    background-size: auto 100%;
+}
+
+.time{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 40px;
+    background: transparent;
+    border: 2px solid #0e3742;
+    border-radius: 10px;
+    color: aqua;
+    font-size: 70px;
+    padding: 20px 50px;
+    /* text-shadow: 0 0 10px #03bcf4; */
+    /* max-height: 105px !important; */
+    animation: change-border 5s linear infinite;
+}
+
+@keyframes change-border {
+    0%,18%,20%{
+        border-color: #0e3742;
+        text-shadow: none;
+    }
+
+    18.1%,20.1%,30%,50%,60.1%{
+        border-color: #fff;
+        text-shadow: 0 0 10px #03bcf4,
+        0 0 20px #03bcf4,
+        0 0 40px #03bcf4,
+        0 0 80px #03bcf4,
+        0 0 160px #03bcf4;
+    }
+}
+
+.item{
+    position: relative;
+    /* display: inline; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item::after{
+    content: '';
+    width: 2px;
+    height: calc(100% + 10px);
+    position: absolute;
+    top: -5px;
+    right: -40px;
+    background-color: #fff;
+    box-shadow: 0 0 10px #03bcf4,
+    0 0 20px #03bcf4,
+    0 0 40px #03bcf4,
+    0 0 80px #03bcf4,
+    0 0 160px #03bcf4;
+}
+
+.last-item::after{
+    display: none;
+}
+
+.disc{
+    font-size: 30px;
+}
+
 .text{
     color: green;
     background: whitesmoke;
     border-radius: 10px;
+    max-height: 105px;
 }
 
-h1{
-    background: black;
-    color: aqua;
-    font-size: 70px;
-    padding: 5px 20px;
+
+.demo{
+    width: 100%;
+    height: 80px;
+    display: none;
 }
 
+@media screen and (max-width:767px) {
+    .time{
+        font-size: 30px;
+    }
+    .disc{
+        font-size: 16px;
+    }
+    
+}
 @media screen and (max-width:600px) {
-    h1{
-        font-size: 45px;
+    .time{
+        font-size: 20px;
+    }
+    
+}
+@media screen and (max-width:500px) {
+    .img{
+        height: 100px;
+    }
+    .time{
+        width: 40%;
+        flex-direction: column;
+        font-size: 30px;
+        justify-content: baseline;
+        gap: 5px;
+        margin-top: 50px;
+    }
+    .text{
+        position: absolute;
+        top: 10px;
+        right: 5px;
+        font-size: 25px;
+        padding: 3px;
+    }
+    .item::after{
+        display: none;
+    }
+    .demo{
+        display: block;
     }
     
 }

@@ -4,12 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ahlan ramadan</title>
-    <link rel="icon" href="./moon.png">
+    <link rel="icon" href="./icon.png">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <div class="img">
+        <img src="./icon.png" alt="">
+    </div>
     <h1 class="text">باقي على رمضان</h1>
-    <h1 class="time"><span id="days">0</span> , <span id="hours">00</span> : <span id="minutes">00</span> : <span id="seconds">00</span></h1>
+    <div class="time">
+        <div class="item">
+            <p id="days">00</p>
+            <p class="disc">Days</p>
+        </div>
+        <div class="item">
+            <p id="hours">00</p>
+            <p class="disc">Hours</p>
+        </div>
+        <div class="item">
+            <p id="minutes">00</p>
+            <p class="disc">Minuts</p>
+        </div>
+        <div class="item last-item">
+            <p id="seconds">00</p>
+            <p class="disc">Seconds</p>
+        </div>
+    </div>
+    <div class="demo"></div>
+    <div class="background"></div>
     <script src="./js/main.js"></script>
 </body>
 </html>
