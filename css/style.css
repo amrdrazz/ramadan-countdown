@@ -9,6 +9,7 @@ body{
     width: 100vw;
     height: 100vh;
     background: url(../background.webp);
+    background-size: 200px 200px;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -18,7 +19,8 @@ body{
 
 .text{
     color: green;
-    background: transparent;
+    background: whitesmoke;
+    border-radius: 10px;
 }
 
 h1{
