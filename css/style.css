@@ -55,6 +55,7 @@ body{
     /* text-shadow: 0 0 10px #03bcf4; */
     /* max-height: 105px !important; */
     animation: change-border 5s linear infinite;
+    margin-bottom: 200px;
 }
 
 @keyframes change-border {
