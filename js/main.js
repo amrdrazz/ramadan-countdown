@@ -6,7 +6,7 @@ let secondsSpan = document.getElementById('seconds');
 
 let countdown = setInterval(()=>{
     let myDate = new Date;;
-    let ramadanDate = new Date('2026-02-18T00:00:00');
+    let ramadanDate = new Date('2026-02-19T00:00:00');
     let deff = ramadanDate - myDate;
 
     if (deff <= 0){
