@@ -5,8 +5,8 @@ let secondsSpan = document.getElementById('seconds');
 
 
 let countdown = setInterval(()=>{
-    let myDate = new Date;;
-    let ramadanDate = new Date('2027-02-8T00:00:00');
+    let myDate = new Date;
+    let ramadanDate = new Date('2027-02-08T00:00:00');
     let deff = ramadanDate - myDate;
 
     if (deff <= 0){
